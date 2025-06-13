@@ -1,0 +1,6 @@
+git init                     # Inicializa um repositório Git
+git add .                    # Adiciona todos os seus arquivos
+git commit -m "Estrutura inicial do projeto" # Salva as mudanças
+git branch -M main           # Garante que a branch principal se chame 'main'
+git remote add origin https://github.com/blocoads/site-bloco-anuncios.git # Conecta ao seu repositório no GitHub
+git push -u origin main      # Envia seus arquivos para o GitHub

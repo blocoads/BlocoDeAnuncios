@@ -1,0 +1,1127 @@
+/* Importação da fonte Urbanist do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis CSS para consistência */
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --secondary-color: #28a745;
+    --secondary-dark: #218838;
+    --text-color: #333;
+    --light-gray: #f8f9fa; /* Usado como fundo para seções do formulário */
+    --medium-gray: #e9ecef; /* Usado para bordas e linhas divisorias */
+    --border-color: #dee2e6;
+    --danger-color: #dc3545;
+    --focus-shadow: rgba(0, 123, 255, 0.25);
+    --border-radius: 8px;
+
+    /* Variáveis de espaçamento para o formulário - AJUSTADAS PARA COMPACTAÇÃO MÁXIMA */
+    --input-padding-compact: 6px 8px; /* Mais compacto para inputs */
+    --button-padding-compact: 8px 12px; /* Mais compacto para botões */
+    --form-section-margin-bottom: 8px; /* Espaçamento entre seções */
+    --form-section-padding: 10px; /* Padding interno das seções */
+    --form-group-margin-bottom: 6px; /* Espaçamento entre grupos de campos */
+    --label-margin-bottom: 3px; /* Espaçamento entre label e input */
+    --hint-text-margin-top: 2px; /* Espaçamento para texto de dica */
+    --button-margin-top: 15px; /* Espaçamento acima do botão de submit */
+    --textarea-min-height: 50px; /* Altura mínima do textarea */
+    --large-padding: 12px 18px; /* Padding maior para botões de tipo de bloco */
+}
+
+/* Reset básico e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura */
+}
+
+/* Estilos do Body (container principal do formulário) */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha ao topo para considerar header/footer */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    background-color: var(--light-gray); /* Fundo suave para o body */
+    color: var(--text-color); /* Cor padrão para texto */
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+main {
+    padding: 0px;
+    max-width: 95%;
+    margin-tOP: 40PX; /* Ajusta a margem superior para o header fixo */
+    width: 100%; /* Garante que main ocupe toda a largura disponível */
+}
+.destaque-site-visual {
+    background-color: #1a0a59; /* Um fundo verde vibrante */
+    color: rgb(244, 179, 39); /* Texto branco para contraste */
+    padding: 3px 8px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
+    font-size: 1.1em;
+    display: inline-block; /* Permite que o padding e margin funcionem corretamente */
+    margin-left: 5px; /* Um pequeno espaço da palavra anterior */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+/* Opcional: Para o cta-main geral */
+.cta-main {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--primary-dark);
+    color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+/* --- Nova Seção de Copy Principal (Hero Section) --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco para a copy */
+    padding-top: 30px; /* Mais padding para destaque */
+    margin-bottom: 20px; /* Espaço antes do primeiro carrossel */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto;
+}
+
+.hero-section h2 {
+    font-size: 2.2em; /* Título maior */
+    color: var(--primary-dark);
+    margin-bottom: 0px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0px;
+    line-height: 1.6;
+    width: 70%;
+}
+
+.hero-section .highlight-text-main {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--secondary-dark); /* Cor de destaque */
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.hero-section .cta-main {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--primary-color); /* Cor de CTA */
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate; /* Animação sutil */
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.03); opacity: 0.95; }
+}
+
+
+/* Estilos para o Carrossel de Anúncios */
+.ad-carousel-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.ad-carousel-section h2 {
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* REMOVIDO: Desalinhamento do segundo carrossel */
+/*
+.ad-carousel-section:nth-of-type(3) .carousel-container {
+    margin-left: 5%;
+    margin-right: -5%;
+    width: 90%;
+}
+*/
+
+.ad-carousel {
+    display: flex;
+    white-space: nowrap; /* Garante que os blocos fiquem em uma única linha */
+    transition: transform 0.1s linear; /* Transição suave para a rolagem */
+    will-change: transform; /* Otimização para animação */
+}
+
+/* Estilos para cada Bloco de Anúncio */
+.ad-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    margin: 8px; /* Espaçamento entre os blocos */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Impede que os blocos encolham */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: var(--border-radius);
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra para o texto */
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.ad-block:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* Sombra mais intensa */
+}
+
+/* Estilo para blocos ocupados */
+.ad-block.occupied {
+    cursor: pointer; /* Ainda permite clicar para ver o anúncio */
+    opacity: 0.9; /* Levemente mais opaco */
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: none; /* Remove o gradiente de cor original */
+    background-color: #fff; /* Fundo branco para exibir a imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre imagem/botão */
+    padding: 5px; /* Reduz padding para dar mais espaço à imagem */
+}
+
+.ad-block-id {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.ad-block .placeholder-text {
+    font-size: 1.15em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* NOVO: Estilo para a frase "Anuncie Aqui" com background */
+.ad-block .placeholder-text .highlight-text {
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+    padding: 2px 5px; /* Pequeno padding para o background */
+    border-radius: 3px; /* Bordas levemente arredondadas */
+    line-height: 1.6; /* Garante que o background não corte o texto */
+    display: inline-block; /* Permite padding e margin no elemento */
+}
+
+/* NOVO: Estilos para a imagem dentro do ad-block */
+.ad-block-image {
+    display: none; /* Inicialmente oculto */
+    max-width: 100%;
+    max-height: 80%; /* Ocupa a maior parte do espaço vertical */
+    object-fit: contain; /* Garante que a imagem se ajuste sem ser cortada */
+    border-radius: 4px;
+    margin-bottom: 5px; /* Espaço entre imagem e botão */
+}
+
+/* NOVO: Estilos para o botão dentro do ad-block */
+.ad-block-button {
+    display: none; /* Inicialmente oculto */
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    white-space: normal; /* Permite quebra de linha em textos longos */
+    word-break: break-word;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+.ad-block-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Tipos de Blocos e Cores/Tamanhos */
+.ad-block.type-A {
+    width: 280px;
+    height: 220px;
+    background-color: #e74c3c;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.ad-block.type-B {
+    width: 220px;
+    height: 180px;
+    background-color: #2ecc71;
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.ad-block.type-C {
+    width: 160px;
+    height: 140px;
+    background-color: #3498db;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    /* NOVO: Ajustes para o texto caber no bloco C */
+    font-size: 0.9em; /* Diminui a fonte do texto dentro do bloco C */
+}
+.ad-block.type-C .placeholder-text {
+    font-size: 1.0em; /* Fonte ainda mais ajustada para o texto principal do C */
+    line-height: 1.2; /* Diminui o espaçamento entre linhas */
+}
+
+
+/* Estilos para Popups (Overlay e Conteúdo) */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* Inicialmente escondido */
+    opacity: 0; /* Transparência inicial */
+    transition: visibility 0s, opacity 0.3s ease; /* Transição suave */
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
+    animation: fadeInScale 0.3s ease-out forwards; /* Animação de entrada */
+    box-sizing: border-box;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--medium-gray);
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-popup:hover {
+    color: var(--danger-color);
+    transform: rotate(90deg);
+}
+
+/* --- Estilos para o Popup de Seleção de Bloco --- */
+.popup-content .popup-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.block-type-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaçamento entre os botões de tipo */
+}
+
+.block-type-list li {
+    width: 100%;
+}
+
+.block-type-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--large-padding); /* Usando variável com padding maior */
+    font-size: 1.2em;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+    background: linear-gradient(45deg, var(--secondary-color) 0%, var(--secondary-dark) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.block-type-btn:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.block-type-btn .block-value {
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+    min-width: 70px;
+    text-align: center;
+}
+
+/* --- Estilos do Formulário de Interesse (Versão Finalizada) --- */
+.popup-content.interest-form-content {
+    max-width: 450px; /* Largura máxima do formulário */
+    padding: 15px; /* Padding interno */
+    max-height: 95vh; /* Altura máxima para caber na tela */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaçamento entre as seções do formulário */
+}
+
+/* Título e resumo do bloco no formulário */
+.popup-content.interest-form-content h3 {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    font-size: 1.6em;
+}
+
+.block-selection-summary {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    background-color: rgba(0, 123, 255, 0.08);
+    padding: 10px 12px;
+    border-radius: 5px;
+    border-left: 4px solid var(--primary-color);
+    text-align: left;
+}
+
+/* Seções do Formulário para Agrupamento Visual */
+.form-section {
+    background-color: var(--light-gray);
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: var(--form-section-padding); /* Usando variável com padding reduzido */
+    margin-bottom: var(--form-section-margin-bottom); /* Usando variável com margem reduzida */
+}
+
+.form-section h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 1.0em;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--form-group-margin-bottom); /* Usando variável com margem reduzida */
+    text-align: left;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+#interestForm label {
+    display: block; /* Garante que o label ocupe sua própria linha */
+    margin-bottom: var(--label-margin-bottom);
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.85em;
+    cursor: pointer;
+    width: 100%;
+}
+
+#interestForm input[type="text"],
+#interestForm input[type="email"],
+#interestForm input[type="url"],
+#interestForm textarea,
+#interestForm select {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    padding: var(--input-padding-compact);
+    font-size: 0.9em;
+    border-radius: 4px;
+    border: 1px solid var(--medium-gray);
+}
+
+#interestForm input[type="file"] {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    padding: 2px 0;
+    font-size: 0.85em;
+}
+
+#interestForm input[type="file"]::-webkit-file-upload-button {
+    padding: 4px 8px;
+    font-size: 0.8em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#interestForm input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--primary-dark);
+}
+
+#interestForm textarea {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    min-height: var(--textarea-min-height);
+    resize: vertical;
+}
+
+.hint-text {
+    font-size: 0.65em;
+    margin-top: var(--hint-text-margin-top);
+    color: #777; /* Cor mais neutra para o hint */
+    text-align: left;
+    font-style: italic;
+}
+
+#interestForm button[type="submit"] {
+    width: 100%; /* Botão também ocupa 100% da largura */
+    margin-top: 15px;
+    padding: var(--button-padding-compact);
+    font-size: 0.95em;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+#interestForm button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.35);
+}
+#anunciar {
+    margin-bottom: 40px;
+}
+
+/* --- Estilos para a exibição do anúncio (Display Ad Popup) --- */
+.popup-content.display-ad-content {
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.display-ad-content h3 {
+    margin-bottom: 5px;
+}
+
+.display-ad-content p {
+    margin-bottom: 0; /* Remove margem extra de parágrafos */
+    font-size: 1em;
+}
+
+.ad-display-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    background-color: var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+#displayAdImage {
+    max-width: 100%; /* Garante que a imagem se ajuste ao container */
+    height: auto;
+    max-height: 220px; /* Altura máxima para não ficar gigante */
+    border-radius: var(--border-radius);
+    object-fit: contain; /* Garante que a imagem caiba sem cortar */
+    background-color: #f0f0f0; /* Fundo para imagens transparentes */
+}
+
+#displayAdImage:not([src]) {
+    display: none; /* Esconde a imagem se não houver src */
+}
+
+#displayAdCopy {
+    font-size: 1em;
+    max-height: 6em; /* Altura máxima para o texto */
+    overflow: hidden; /* Esconde o excesso de texto */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    padding: 0 5px;
+}
+
+.ad-display-btn {
+    display: flex; /* Para centralizar o texto dentro do botão */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 10px;
+    min-width: 120px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.ad-display-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+/* --- Seção "Por que anunciar com a gente?" --- */
+
+.why-us-section {
+    background-color: #f9f9f9; /* Um fundo cinza claro para destacar a seção */
+    padding: 60px 20px; /* Mais preenchimento para espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-bottom: 1px solid #eee; /* Uma linha sutil na parte inferior */
+}
+
+.why-us-section .container {
+    max-width: 900px; /* Limita a largura do conteúdo para melhor leitura */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+.why-us-section h2 {
+    font-size: 2.5em; /* Tamanho maior para o título principal */
+    color: #333; /* Cor mais escura para o título */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    position: relative; /* Para o pseudo-elemento */
+    padding-bottom: 10px; /* Espaço para o underline */
+}
+
+/* Underline sutil para o título */
+.why-us-section h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Largura do underline */
+    height: 4px; /* Espessura do underline */
+    background-color: #4CAF50; /* Cor verde vibrante para combinar com o destaque-site-visual */
+    margin: 10px auto 0; /* Centraliza e posiciona o underline */
+    border-radius: 2px; /* Bordas arredondadas para o underline */
+}
+
+.why-us-section ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    display: grid; /* Usa Grid para organizar os itens em colunas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 30px; /* Espaço entre os itens da lista */
+}
+
+.why-us-section li {
+    background-color: #ffffff; /* Fundo branco para cada item da lista */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 30px; /* Preenchimento interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para profundidade */
+    text-align: left; /* Alinha o texto à esquerda dentro do item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+.why-us-section li:hover {
+    transform: translateY(-8px); /* Efeito de "levantar" ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover */
+}
+
+.why-us-section li strong {
+    color: #4CAF50; /* Cor verde para os títulos dos itens */
+    font-size: 1.25em; /* Tamanho maior para o título do item */
+    display: block; /* Garante que o strong ocupe sua própria linha */
+    margin-bottom: 10px; /* Espaço abaixo do título do item */
+}
+
+.why-us-section li p {
+    font-size: 1.05em; /* Tamanho da fonte para o parágrafo */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    color: #555; /* Cor de texto mais suave */
+}
+
+/* Estilos para os emojis dentro dos itens da lista (se adicionados) */
+.why-us-section li span.emoji {
+    font-size: 1.5em; /* Tamanho maior para o emoji */
+    margin-right: 10px; /* Espaço à direita do emoji */
+    vertical-align: middle; /* Alinha o emoji verticalmente */
+}
+
+
+/* --- Estilos para o FAQ interativo (Acordeão) --- */
+.faq-section {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    overflow: hidden; /* Garante que a resposta escondida não ocupe espaço */
+}
+
+.faq-question {
+    padding: 15px 20px;
+    font-size: 1.1em;
+    color: var(--primary-dark);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f8ff; /* Fundo leve para a pergunta */
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: #e0f0ff;
+}
+
+.faq-question.active {
+    background-color: #d0e8ff; /* Fundo mais escuro quando ativo */
+}
+
+.faq-toggle-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+    margin-left: 10px; /* Espaço entre o texto da pergunta e o ícone */
+}
+
+.faq-answer {
+    padding: 0 20px; /* Padding horizontal fixo */
+    background-color: #fefefe;
+    max-height: 0; /* Inicia escondido */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição para altura e padding */
+}
+
+.faq-answer p {
+    padding: 15px 0; /* Padding vertical apenas para o parágrafo da resposta */
+    margin: 0; /* Remove margem padrão do parágrafo */
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+   header {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+.destaque-site-visual {
+    background-color: #1a0a59; /* Um fundo verde vibrante */
+    color: rgb(244, 179, 39); /* Texto branco para contraste */
+    padding: 3px 8px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block; /* Permite que o padding e margin funcionem corretamente */
+    margin-left: 5px; /* Um pequeno espaço da palavra anterior */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+    main {
+        padding-top: 30px;
+        margin: 60px auto 10px auto;
+    }
+
+    /* Ajustes para a hero section em mobile */
+    .hero-section {
+        padding: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .hero-section h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+         width: 100%;
+    }
+    .hero-section p {
+        font-size: 10px;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .hero-section .highlight-text-main {
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .hero-section .cta-main {
+        font-size: 1.2em;
+    }
+
+    /* REMOVIDO: Ajustes para o desalinhamento em mobile */
+    /*
+    .ad-carousel-section:nth-of-type(3) .carousel-container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    */
+
+    .ad-block {
+        margin: 5px;
+        padding: 5px; /* Reduz padding em telas pequenas */
+    }
+
+    .carousel-container {
+        padding: 5px;
+    }
+
+    .popup-content {
+        padding: 15px;
+    }
+
+    .popup-content h3 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .close-popup {
+        font-size: 1.3em;
+        top: 8px;
+        right: 8px;
+    }
+
+    /* Ajustes para o popup de seleção de bloco em mobile */
+    .block-type-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .block-type-btn .block-value {
+        font-size: 0.85em;
+        padding: 4px 8px;
+    }
+
+    /* Ajustes para o formulário de interesse em mobile */
+    .popup-content.interest-form-content {
+        padding: 10px;
+        max-width: 95%;
+        gap: 6px;
+    }
+
+    .form-section {
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+
+    .form-section h4 {
+        font-size: 0.95em;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+    }
+
+    .form-group {
+        margin-bottom: 4px;
+    }
+
+    #interestForm label {
+        font-size: 0.8em;
+        margin-bottom: 2px;
+    }
+
+    #interestForm input, #interestForm textarea, #interestForm select {
+        padding: 5px 6px;
+        font-size: 0.85em;
+        width: 100%;
+    }
+    /* Ajuste do tipo C em mobile, se necessário (o ajuste global já ajuda) */
+    .ad-block.type-C {
+        font-size: 0.8em; /* Pode precisar de ajuste fino para mobile */
+    }
+    .ad-block.type-C .placeholder-text {
+        font-size: 0.9em;
+        line-height: 1.1;
+    }
+
+    .hint-text {
+        font-size: 0.6em;
+        margin-top: 1px;
+    }
+
+    #interestForm button[type="submit"] {
+        padding: 8px;
+        font-size: 0.9em;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Ajustes para o popup de exibição de anúncio em mobile */
+    .popup-content.display-ad-content {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    #displayAdImage {
+        max-height: 180px;
+    }
+
+    #displayAdCopy {
+        font-size: 0.9em;
+    }
+
+    .ad-display-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        min-width: 100px;
+    }
+    .why-us-section h2 {
+        font-size: 2em; /* Diminui o tamanho do título em telas menores */
+    }
+
+    .why-us-section ul {
+        grid-template-columns: 1fr; /* Uma única coluna em telas muito pequenas */
+    }
+
+    .why-us-section li {
+        padding: 25px; /* Ajusta o padding dos itens */
+    }
+
+    /* Ajustes para FAQ em mobile */
+    .faq-question {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    .faq-answer p {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+    * Seções do Formulário para Agrupamento Visual */
+#interestFormPopup {
+    margin-top: 30px;
+}
+    .form-section {
+    background-color: var(--light-gray);
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: var(--form-section-padding); /* Usando variável com padding reduzido */
+    margin-bottom: var(--form-section-margin-bottom); /* Usando variável com margem reduzida */
+}
+.popup-content.interest-form-content h3 {
+    font-size: 20px;
+}
+.block-selection-summary {
+    font-size: 12px;
+}
+.form-section h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 1.0em;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--form-group-margin-bottom); /* Usando variável com margem reduzida */
+    text-align: left;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+#interestForm label {
+    display: block; /* Garante que o label ocupe sua própria linha */
+    margin-bottom: var(--label-margin-bottom);
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.85em;
+    cursor: pointer;
+    width: 100%;
+}
+
+#interestForm input[type="text"],
+#interestForm input[type="email"],
+#interestForm input[type="url"],
+#interestForm textarea,
+#interestForm select {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    padding: var(--input-padding-compact);
+    font-size: 0.9em;
+    border-radius: 4px;
+    border: 1px solid var(--medium-gray);
+}
+
+#interestForm input[type="file"] {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    padding: 2px 0;
+    font-size: 0.85em;
+}
+
+#interestForm input[type="file"]::-webkit-file-upload-button {
+    padding: 4px 8px;
+    font-size: 0.8em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#interestForm input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--primary-dark);
+}
+
+#interestForm textarea {
+    width: 100%; /* Ocupa 100% da largura do seu container */
+    min-height: var(--textarea-min-height);
+    resize: vertical;
+}
+
+.hint-text {
+    font-size: 0.65em;
+    margin-top: var(--hint-text-margin-top);
+    color: #777; /* Cor mais neutra para o hint */
+    text-align: left;
+    font-style: italic;
+}
+
+#interestForm button[type="submit"] {
+    width: 100%; /* Botão também ocupa 100% da largura */
+    margin-top: 15px;
+    padding: var(--button-padding-compact);
+    font-size: 0.95em;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+#interestForm button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.35);
+}
+#anunciar {
+    margin-bottom: 40px;
+}
+}
